@@ -1,4 +1,4 @@
-# Ruta Escolar — Dominio Hexagonal (Java 17 + Maven)
+# Ruta Escolar — Dominio Hexagonal
 
 Núcleo de dominio para **asignar un bus y un conductor** a una ruta usando **puertos y adaptadores**. Incluye **2 pruebas unitarias** con **JUnit 5**. Pensado para NetBeans o cualquier IDE Java.
 

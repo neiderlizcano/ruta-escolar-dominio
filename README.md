@@ -2,12 +2,6 @@
 
 Núcleo de dominio para **asignar un bus y un conductor** a una ruta usando **puertos y adaptadores**. Incluye **2 pruebas unitarias** con **JUnit 5**. Pensado para NetBeans o cualquier IDE Java.
 
-
-## Requisitos
-- Java **17+**
-- Maven **3.8+**
-- IDE opcional: NetBeans 15+ o VS Code
-
 ## Estructura
 pom.xml
 src/

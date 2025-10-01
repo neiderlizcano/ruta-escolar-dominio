@@ -1,13 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.rutaescolar.desarrollo.pi.und2.aplicacion.servicios;
 
-/**
- *
- * @author ASUS
- */
-public class ConsultarDisponibilidadService {
-    
+import co.edu.rutaescolar.desarrollo.pi.und2.aplicacion.dto.*;
+import co.edu.rutaescolar.desarrollo.pi.und2.aplicacion.puertos.in.ConsultarDisponibilidadIn;
+import co.edu.rutaescolar.desarrollo.pi.und2.dominio.puertos.*;
+import co.edu.rutaescolar.desarrollo.pi.und2.dominio.vo.Itinerario;
+
+public final class ConsultarDisponibilidadService implements ConsultarDisponibilidadIn {
+
+    private final RepoBus repoBus;
+    private final RepoConductor repoCon;
+
+    public ConsultarDisponibilidadService(RepoBus b, RepoConductor c) {
+        this.repoBus = b;
+        this.repoCon = c;
+    }
+
+    @Override
+    public DisponibilidadDTO run(String rutaId, int demandaMinima) {
+        var itin = new Itinerario(demandaMinima);
+        return new DisponibilidadDTO(!repoBus.disponibles(itin).isEmpty(), !repoCon.disponibles(itin).isEmpty());
+    }
 }

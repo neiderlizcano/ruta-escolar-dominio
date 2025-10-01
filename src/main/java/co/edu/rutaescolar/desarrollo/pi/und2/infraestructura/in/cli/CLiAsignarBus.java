@@ -19,6 +19,7 @@ public final class CliAsignarBus {
         System.out.print("Demanda mínima: ");
         var demanda = Integer.parseInt(sc.nextLine());
         var resp = api.run(new AsignacionRequestDTO(rutaId, demanda));
-        System.out.println("OK -> Ruta=" + resp.rutaId() + " Bus=" + resp.busId() + " Conductor=" + resp.conductorId());
+        System.out.println("OK -> Ruta=" + resp.rutaId() + " Bus=" + resp.busId() 
+                + " Conductor=" + resp.conductorId());
     }
 }

@@ -1,13 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.rutaescolar.desarrollo.pi.und2.infraestructura.out.jdbc;
 
-/**
- *
- * @author ASUS
- */
-public class RepoconductorJdbc {
-    
+import java.util.List;
+import co.edu.rutaescolar.desarrollo.pi.und2.dominio.puertos.RepoConductor;
+import co.edu.rutaescolar.desarrollo.pi.und2.dominio.entidades.Conductor;
+import co.edu.rutaescolar.desarrollo.pi.und2.dominio.vo.Itinerario;
+
+public final class RepoConductorJdbc implements RepoConductor {
+
+    @Override
+    public List<Conductor> disponibles(Itinerario itin) {
+        return List.of(new Conductor("C1"));
+    }
 }

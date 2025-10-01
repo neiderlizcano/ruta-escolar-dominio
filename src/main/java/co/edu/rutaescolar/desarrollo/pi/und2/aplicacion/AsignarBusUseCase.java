@@ -20,7 +20,8 @@ public final class AsignarBusUseCase {
     private final RepoConductor repoConductor;
     private final AsignadorDeRecursos asignador;
 
-    public AsignarBusUseCase(RepoBus repoBus, RepoConductor repoConductor, AsignadorDeRecursos asignador) {
+    public AsignarBusUseCase(RepoBus repoBus, RepoConductor repoConductor,
+            AsignadorDeRecursos asignador) {
         this.repoBus = repoBus;
         this.repoConductor = repoConductor;
         this.asignador = asignador;
@@ -31,6 +32,7 @@ public final class AsignarBusUseCase {
         List<Conductor> conductores = repoConductor.disponibles(itin);
         var sel = asignador.elegir(buses, conductores, itin);
         ruta.asignarBus(sel.bus().id(), sel.conductor().id());
-        return new AsignacionRealizada(ruta.id(), sel.bus().id(), sel.conductor().id());
+        return new AsignacionRealizada(ruta.id(), sel.bus().id(),
+                sel.conductor().id());
     }
 }

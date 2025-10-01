@@ -12,7 +12,8 @@ public final class AsignacionMapper {
         return new Itinerario(req.demandaMinima());
     }
 
-    public static AsignacionResponseDTO toDTO(String rutaId, String busId, String condId) {
+    public static AsignacionResponseDTO toDTO(String rutaId, String busId,
+            String condId) {
         return new AsignacionResponseDTO(rutaId, busId, condId);
     }
 }

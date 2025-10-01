@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.udec.rutaescolar.domain.enums;
 
-/**
- *
- * @author ASUS
- */
-public class enums {
-    
+public enum EstadoBus {
+    EN_RUTA,
+    EN_MANTENIMIENTO,
+    FUERA_DE_SERVICIO
 }
